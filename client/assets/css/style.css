@@ -1,0 +1,235 @@
+*{
+    margin: 0 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    padding-top: 80px;
+}
+header{
+    color: white;
+    width: 100%;
+    position: fixed;
+    background: rgb(160, 78, 40);
+    z-index: 2;
+    left: 0;
+    top: 0;
+    height: 80px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+}
+footer{
+    margin-top: 40px;
+    width: 100%;
+    height: 200px;
+    background: rgb(160, 78, 40);
+    
+}
+.footer-content{
+    display: flex;
+    align-items: center;
+    width: 70%;
+    height: 100%;
+    margin: 0 auto;
+    color: white;
+}
+.footer-content img{
+    height: 32px;
+    width: 32px;
+}
+.footer-content a{
+    text-decoration: none;
+    color: white;
+    font-size: 25px;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+}
+.header-content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo-part{
+    color: white;
+    text-decoration: none;
+    align-items: center;
+    display: flex;
+}
+.logo-part:hover{
+    color: white;
+}
+.buttons-part{
+    color: white;
+    margin: 0;
+    gap: 10px;
+    display: flex;
+    list-style: none;
+    padding: 0;
+}
+.buttons-part a{
+    display: flex;
+    justify-content: center;
+}
+.buttons-part li a svg path{
+    fill: red;
+}
+.buttons-part img{
+    width: 32px;
+    height: 32px;
+}
+.burger-menu{
+    display: none;
+    width: 48px;
+    height: 48px;
+}
+.header-content{
+    width: 80%;
+    margin: 0 auto;
+    color: white;
+}
+
+@media screen and (max-width: 500px) {
+    .burger-menu{
+        display: block;
+    }
+    .buttons-part{
+        display: none;
+    }
+    .header-content {
+        padding:0px 20px;
+        width: 100%;
+
+    }
+}
+
+
+.buttons-part a{
+    color: white;
+    padding: 10px 10px;
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 10px;
+    text-decoration: none;
+    transition: 0.15s ease-in-out;
+}
+
+.buttons-part a:hover{
+    color: black;
+    background: white;
+}
+.logo-part img{
+    height: 64px;
+    width: 64px;
+}
+.logo-text{
+    text-transform: uppercase;
+}
+.logo-text h4{
+    margin: 0;
+}
+.search{
+    margin: 2% 0% 2% 0%;
+    display: flex;
+    flex-direction: row;
+}
+.search input{
+    padding: 10px 10px;
+    border-radius: 10px 0px 0px 10px;
+    width: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    margin: 0;
+}
+.search button{
+    margin: 0;
+    padding: 10px 5px;
+    width: 90px;
+    background: rgb(160, 78, 40);
+    color: white;
+    border: 1px solid rgba(0,0,0,0.4);
+    border-radius: 0px 10px 10px 0px;
+}
+
+.item-list .col-12 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 5px;
+  }
+.item{
+cursor: pointer;
+  position: relative;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+  width: calc(25% - 4px);
+  box-sizing: border-box;
+  transition: 0.15s ease-in-out;
+  text-align: center;
+  padding-bottom: 15px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.item img{
+    
+    width: 100%;
+    border-radius: 5px 5px 0px 0px;
+}
+.item p{
+    flex: 1 0 auto;
+    padding: 5px 10px;
+    font-size: 18px;
+text-overflow: ellipsis;
+overflow: hidden;
+-webkit-line-clamp: 2;
+display: -webkit-box;
+word-wrap: break-word;
+-webkit-box-orient: vertical;
+box-orient: vertical;
+}
+.item button{
+    width: 50%;
+    border-radius: 5px;
+    background: rgb(160, 78, 40);
+    border: none;
+    padding: 5px 10px;
+    color: white;
+}
+@media (max-width: 1180px) {
+    .item{
+
+        width: calc(33% - 4px);
+    }
+}
+@media (max-width: 834px) {
+    .item{
+        width: calc(50% - 4px);
+    }
+    .item p{
+        font-size: 15px;
+    }
+  }
+
+#pages-list{
+    display: flex;
+    gap: 10px;
+    flex-direction: row;
+
+}
+#pages-list button{
+    width: 32px;
+    height: 32px;
+    border-radius: 5px;
+    background-color: white;
+    border: 2px solid rgb(160, 78, 40);
+}
+#pages-list .selected{
+    background: rgb(160, 78, 40);
+    color: white;
+
+}
+
+#pages-list button:hover{
+    color: white;
+    background-color: rgb(160, 78, 40);
+}

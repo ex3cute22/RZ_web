@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="/node_modules/bootstrap/dist/css/bootstrap.css"
+      rel="stylesheet"
+    />
+    <script src="/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="/assets/css/style-admin.css" />
+
+    <title>Админ-панель</title>
+    <script type="module" src="../assets/js/admin.js"></script>
+  </head>
+  <body>
+    <header>
+      <div class="header-content">
+        <a href="/" class="logo-part">
+          <img src="/assets/images/logo.svg" alt="" />
+          <div class="logo-text">
+            <h4>
+              База <br />
+              минералов
+            </h4>
+          </div>
+        </a>
+        <ul class="buttons-part">
+          <li>
+            <a href=""> Добавить</a>
+          </li>
+          <li>
+            <a href=""> Войти</a>
+          </li>
+        </ul>
+        <img src="/assets/images/menu.svg" class="burger-menu" alt="" />
+      </div>
+    </header>
+    <div class="container">
+      <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button
+            class="nav-link active"
+            id="pills-home-tab"
+            data-bs-toggle="pill"
+            data-bs-target="#pills-home"
+            type="button"
+            role="tab"
+            aria-controls="pills-home"
+            aria-selected="true"
+          >
+            Минерал
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button
+            class="nav-link"
+            id="pills-profile-tab"
+            data-bs-toggle="pill"
+            data-bs-target="#pills-profile"
+            type="button"
+            role="tab"
+            aria-controls="pills-profile"
+            aria-selected="false"
+          >
+            Месторождение
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button
+            class="nav-link"
+            id="pills-contact-tab"
+            data-bs-toggle="pill"
+            data-bs-target="#pills-contact"
+            type="button"
+            role="tab"
+            aria-controls="pills-contact"
+            aria-selected="false"
+          >
+            Камень
+          </button>
+        </li>
+      </ul>
+      <div class="tab-content" id="pills-tabContent">
+        <div
+          class="tab-pane fade show active"
+          id="pills-home"
+          role="tabpanel"
+          aria-labelledby="pills-home-tab"
+        >
+          <div class="row gy-4">
+            <div class="photos col-md-12 col-lg-7">
+              <div class="thumbnails" id="thumbnails"></div>
+              <input
+                class="form-control form-control-lg"
+                id="formFileLg"
+                type="file"
+                multiple
+              />
+            </div>
+            <div class="redact col-md-12 col-lg-5">
+              <div class="redact-string">
+                <span>Название</span>
+                <input
+                  id="input-name"
+                  type="text"
+                  placeholder="Введите название"
+                />
+              </div>
+              <div class="redact-string">
+                <span>Вес (гр.)</span>
+                <input
+                  id="input-weight"
+                  type="number"
+                  placeholder="Введите вес"
+                />
+              </div>
+              <div class="redact-string">
+                <span>Ширина (мм.)</span>
+                <input
+                  id="input-width"
+                  type="number"
+                  placeholder="Введите ширину"
+                />
+              </div>
+              <div class="redact-string">
+                <span>Длина (мм.)</span>
+                <input
+                  id="input-length"
+                  type="number"
+                  placeholder="Введите длину"
+                />
+              </div>
+              <div class="redact-string">
+                <span>Высота (мм.)</span>
+                <input
+                  id="input-height"
+                  type="number"
+                  placeholder="Введите высоту"
+                />
+              </div>
+
+              <div class="redact-string">
+                <span>Месторождение</span>
+                <div class="select-wrapper">
+                  <select id="select-territory" class="">
+                    <option selected="" disabled>Выберите страну</option>
+                  </select>
+                  <button id="add-territory">Добавить страну</button>
+                </div>
+              </div>
+              <div class="redact-string">
+                <span>Камень</span>
+                <select id="select-stone" class="">
+                  <option selected disabled>Выберите камень</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="description col-lg-7 col-12">
+              <h2>ОПИСАНИЕ</h2>
+              <textarea
+                id="description"
+                name=""
+                placeholder="Введите описание"
+                rows="7"
+              ></textarea>
+              <button class="save-btn" id="send-mineral">Добавить</button>
+            </div>
+          </div>
+        </div>
+        <div
+          class="tab-pane fade"
+          id="pills-profile"
+          role="tabpanel"
+          aria-labelledby="pills-profile-tab"
+        >
+          <div class="add-string">
+            <p>Месторождение</p>
+            <input
+              type="text"
+              id="new-territory-input"
+              placeholder="Введите страну"
+            />
+            <button id="new-territory-btn" class="save-btn">Добавить</button>
+          </div>
+        </div>
+        <div
+          class="tab-pane fade"
+          id="pills-contact"
+          role="tabpanel"
+          aria-labelledby="pills-contact-tab"
+        >
+          <div class="add-string">
+            <p>Камень</p>
+            <input
+              id="new-stone-input"
+              type="text"
+              placeholder="Введите камень"
+            />
+            <button
+              id="new-stone-btn"
+              class="save-btn"
+              onclick="submitMineralData()"
+            >
+              Добавить
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div class="footer-content">
+        <a href="https://github.com/ex3cute22">
+          <img src="/assets/images/github.svg" alt="" />
+          GitHub</a
+        >
+      </div>
+    </footer>
+  </body>
+</html>

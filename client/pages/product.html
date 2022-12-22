@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="/node_modules/bootstrap/dist/css/bootstrap.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/assets/css/style-product.css" />
+    <title>Камень</title>
+    <script type="module" src="../assets/js/product.js"></script>
+  </head>
+  <body>
+    <header>
+      <div class="header-content">
+        <a href="/" class="logo-part">
+          <img src="/assets/images/logo.svg" alt="" />
+          <div class="logo-text">
+            <h4>
+              База <br />
+              минералов
+            </h4>
+          </div>
+        </a>
+        <ul class="buttons-part">
+          <li>
+            <a href="/pages/admin.html"> Добавить</a>
+          </li>
+          <li>
+            <a href=""> Войти</a>
+          </li>
+        </ul>
+        <img src="/assets/images/menu.svg" class="burger-menu" alt="" />
+      </div>
+    </header>
+    <div class="container">
+      <section class="row gy-4">
+        <div class="card-image-part col-md-12 col-lg-7" id="images"></div>
+        <div class="card-info-part col-md-12 col-lg-5">
+          <div class="name-wrapper">
+            <h4 id="name"></h4>
+            <a href="#" id="a-edit">Редактировать</a>
+          </div>
+          <div class="info-string">
+            <span>Вес:</span>
+            <div class="dash-line"></div>
+            <span>
+              <span id="span-weight"></span>
+              гр.</span
+            >
+          </div>
+          <div class="info-string">
+            <span>Размеры:</span>
+            <div class="dash-line"></div>
+            <span
+              ><span id="span-lenght"></span>-<span id="span-width"></span
+              >-<span id="span-height"></span>мм.</span
+            >
+          </div>
+          <div class="info-string">
+            <span>Месторождение:</span>
+            <div class="dash-line"></div>
+            <span id="span-territory"></span>
+          </div>
+          <div class="info-string">
+            <span>Камень:</span>
+            <div class="dash-line"></div>
+            <span id="span-stone"></span>
+          </div>
+        </div>
+      </section>
+      <section class="row">
+        <div class="description col-lg-7 col-md-12">
+          <h2>ОПИСАНИЕ</h2>
+          <p id="description"></p>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <div class="footer-content">
+        <a href="https://github.com/ex3cute22">
+          <img src="/assets/images/github.svg" alt="" />
+          GitHub</a
+        >
+      </div>
+    </footer>
+  </body>
+</html>

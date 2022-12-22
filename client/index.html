@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="node_modules/bootstrap/dist/css/bootstrap.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <title>Крутой сайт</title>
+    <script type="module" src="assets/js/list.js"></script>
+  </head>
+  <body>
+    <header>
+      <div class="header-content">
+        <a href="/" class="logo-part">
+          <img src="assets/images/logo.svg" alt="" />
+          <div class="logo-text">
+            <h4>
+              База <br />
+              минералов
+            </h4>
+          </div>
+        </a>
+        <ul class="buttons-part">
+          <li>
+            <a href="/pages/admin.html"> Добавить</a>
+          </li>
+          <li>
+            <a href=""> Войти</a>
+          </li>
+        </ul>
+        <img src="assets/images/menu.svg" class="burger-menu" alt="" />
+      </div>
+      <!-- тут располагается код нашей шапки -->
+    </header>
+    <div class="container">
+      <section class="row">
+        <div class="col-12">
+          <div class="search">
+            <input
+              type="text"
+              class="search-input"
+              id="search-input"
+              placeholder="Поиск по названию"
+              value=""
+            />
+            <button id="search-btn">Найти</button>
+          </div>
+        </div>
+      </section>
+      <section class="item-list row">
+        <div class="col-12" id="item-list"></div>
+        <div id="pages-list">
+        
+        </div>
+      </section>
+    </div>
+    <footer>
+      <div class="footer-content">
+        <a href="https://github.com/ex3cute22">
+          <img src="assets/images/github.svg" alt="" />
+          GitHub</a
+        >
+      </div>
+    </footer>
+  </body>
+</html>
